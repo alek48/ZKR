@@ -1,4 +1,4 @@
-from hashlib import sha256
+from hashlib import md5
 from os import urandom
 
 iterations = 1_000_000
@@ -9,7 +9,7 @@ for _ in range(iterations):
     while True:
         i += 1
         data = urandom(128)
-        hash_head = sha256(data).hexdigest()[:3]
+        hash_head = md5(data).hexdigest()[:3]
         if hash_head not in bits_list:
             bits_list.append(hash_head)
         else:

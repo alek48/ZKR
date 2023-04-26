@@ -39,7 +39,6 @@ else:
 
 hashes = generate_hashes_verbose(data)
 
-print("\n" + "Hash".ljust(10), "Bytes".ljust(7), "Value", "\n---")
+print("\n" + "Hash".ljust(10), "Bits".ljust(7), "Value", "\n---")
 for item in hashes.items():
     print(item[0].ljust(10), str(len(item[1])*4).ljust(7), item[1])
-

@@ -32,7 +32,7 @@ for size in sizes:  # dla każdego rozmiaru danych
             temp_scores[i] += (ret[i])  # sumuj czasy z każdej iteracji
     for i in range(len(temp_scores)):
         scores[i].append(temp_scores[i]/ITERATIONS)  # dodaj do wyników średni czas każdego algorytmu
-scores = [x[1:] for x in scores] # odetnij rozmiar 512 z wyników
+scores = [x[1:] for x in scores]  # odetnij rozmiar 512 z wyników
 sizes = sizes[1:]  # odetnij rozmiar 512 z listy testowanych rozmiarów
 
 # definicje dla formatowania wykresów
